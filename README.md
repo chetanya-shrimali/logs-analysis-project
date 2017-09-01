@@ -1,5 +1,5 @@
 # logs-analysis-project
-A project to connect to PostgreSql database using the `psycog2` library and executing complex Queries on the data provided
+A project to connect to PostgreSql database using the `psycopg2` library and executing complex Queries on the data provided
 by `news` database
 ### Requirements
 - Download `newsdata.sql` from the following link
