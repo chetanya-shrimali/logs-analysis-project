@@ -3,7 +3,6 @@ from questions import question_1, question_2, question_3
 from queries import query_1, query_2, query_3
 import psycopg2
 
-
 # Database Name
 DBNAME = "news"
 
@@ -31,25 +30,25 @@ def execute_query(questionString, query, connection):
 
         # condition
         if questionString != question_3:
-            print (str(count) + ")  " + str(result[0]) + '  -- ' + str(
+            print(str(count) + ")  " + str(result[0]) + '  -- ' + str(
                 result[1]) + ' views')
         else:
-            print (str(count) + ")  " + str(result[0]) + '  -- ' + str(
+            print(str(count) + ")  " + str(result[0]) + '  -- ' + str(
                 result[1]) + '%')
-    print "\n\n"
+    print("\n\n")
 
 
 # Main function
 def main():
-    print "connecting to database -->%s\n" % DBNAME
+    print("connecting to database -->%s\n") % DBNAME
 
     # connecting to database
     connection = psycopg2.connect(database=DBNAME)
 
     # condition to check
     if connection.status == 1:
-        print "connected successfully\n"
-        print "executing queries\n"
+        print("connected successfully\n")
+        print("executing queries\n")
 
         # method call to execute queries
         execute_query(question_1, query_1, connection)
@@ -59,7 +58,7 @@ def main():
         # execute_query(question_3, connection)
         connection.close()
     else:
-        print "connection failed"
+        print("connection failed")
 
 
 # Indicates that main function should be called on execution
