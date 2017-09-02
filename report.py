@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # imports
 from questions import question_1, question_2, question_3
 from queries import query_1, query_2, query_3
